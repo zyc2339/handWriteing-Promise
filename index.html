@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="promise.js"></script>
+</head>
+<body>
+
+
+
+
+    <script>
+let p1 = new Promise((resolve, reject)=>{
+    setTimeout(()=>{
+        // resolve('ok');
+        resolve('ok');
+
+    },1000)
+    
+    //抛出异常
+    // throw"err"
+
+});
+let p2 = Promise.resolve(`success`)
+let p3 = Promise.resolve(`Oh Yeah`)
+
+
+let result = Promise.all([p1,p2,p3])
+
+console.log(result);
+
+
+
+
+
+
+// p.then(
+    
+// value =>{
+//     console.log(111)
+// }).then(value=>{
+//     console.log(222)
+// }).then(value=>{
+//     console.log(333)
+// }).catch(reason=>{
+//     console.log(reason);
+// })
+// ,reason =>{
+
+// throw"err"
+//     console.log(reason);
+// }
+// );
+
+
+
+ </script>
+</body>
+</html>
